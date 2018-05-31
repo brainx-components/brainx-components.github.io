@@ -36,6 +36,20 @@ $(document).ready(function () {
 
 // Get Repos from Brainx Components
 
+function appendUser(user) {
+    $("#memberList").append(
+        "<div class='row margin-zero member-row'>" +
+        "<div class='col-md-3' >" +
+        "<img class='img-circle' width='175px' src='" + user.avatar_url + "'>" +
+        "</div>" +
+        "<div class='col-md-9'>" +
+        "<a href='" + user.html_url + "' target='_blank'><h2>" + user.name + "</h2></a>" +
+            "<p>" + (user.bio == null ? "" : user.bio) + "</p>" +
+        "</div>" +
+        "</div>"
+    );
+}
+
 // function getUser(user_url) {
 //     $.ajax({
 //         type: "GET",
@@ -72,17 +86,13 @@ $(document).ready(function () {
         success: function (result) {
             for (i in result) {
                 // var user = getUser(result[i].url);
-                $("#memberList").append(
-                    "<div class='row margin-zero member-row'>"+
-                        "<div class='col-md-3' >"+
-                    "<img class='img-circle' width='175px' src='" + result[i].avatar_url+"'>"+
-                        "</div>"+
-                    "<div class='col-md-9'>"+
-                    "<a href='" + result[i].html_url + "' target='_blank'><h2>" + result[i].login +"</h2></a>"+
-                        "<p>Programmer is a person, who has no life.</p>"+
-                    "</div>"+
-                    "</div>"
-                );
+                $.ajax({
+                    type: "GET",
+                    url: result[i].url,
+                    dataType: "json",
+                    success: function (innerResult) {
+                        appendUser(innerResult);
+                    }});
                 console.log("i: " + i);
             }
             console.log(result);
