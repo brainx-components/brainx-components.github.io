@@ -33,3 +33,60 @@ $(document).ready(function () {
         });
     });
 })
+
+// Get Repos from Brainx Components
+
+// function getUser(user_url) {
+//     $.ajax({
+//         type: "GET",
+//         url: user_url,
+//         dataType: "json",
+//         success: function (result) {
+//             return result;
+//         }
+//     });
+// };
+
+$(document).ready(function () {
+    $.ajax({
+        type: "GET",
+        url: "https://api.github.com/users/brainx-components/repos",
+        dataType: "json",
+        success: function (result) {
+            for (i in result) {
+                $("#repo_list").append(
+                    "<div class='panel-heading'><a href='" + result[i].html_url + "' target='_blank'>" +
+                    result[i].name + "</a></div> <div class='panel-body'>" + result[i].description + "</div>"
+                );
+                console.log("i: " + i);
+            }
+            console.log(result);
+            $("#repo_count").append("Total Repos: " + result.length);
+        }
+    });
+
+    $.ajax({
+        type: "GET",
+        url: "https://api.github.com/orgs/brainx-components/public_members",
+        dataType: "json",
+        success: function (result) {
+            for (i in result) {
+                // var user = getUser(result[i].url);
+                $("#memberList").append(
+                    "<div class='row margin-zero member-row'>"+
+                        "<div class='col-md-3' >"+
+                    "<img class='img-circle' width='175px' src='" + result[i].avatar_url+"'>"+
+                        "</div>"+
+                    "<div class='col-md-9'>"+
+                    "<a href='" + result[i].html_url + "' target='_blank'><h2>" + result[i].login +"</h2></a>"+
+                        "<p>Programmer is a person, who has no life.</p>"+
+                    "</div>"+
+                    "</div>"
+                );
+                console.log("i: " + i);
+            }
+            console.log(result);
+            //$("#repo_count").append("Total Repos: " + result.length);
+        }
+    });
+});

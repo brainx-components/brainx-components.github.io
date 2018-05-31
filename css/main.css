@@ -97,6 +97,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 /* Custom CSS */
+.margin-zero {
+    margin: 0px;
+}
 body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
@@ -166,15 +169,27 @@ h4 {
 .item span {
     font-style: normal;
 }
+.panel-heading {
+    background-color: #03A8F5;
+    border-color: #03A8F5;
+}
+.panel-heading a {
+    color: white;
+}
+.panel-body {
+    padding: 15px;
+    border: 1px solid #03A8F5;
+    margin-bottom: 10px;
+}
 .panel {
-    border: 1px solid #03A8F5; 
-    border-radius:0 !important;
+    padding: 0px 20px;
+    border-color: #03A8F5;
     transition: box-shadow 0.5s;
 }
 .panel:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
-.panel-footer .btn:hover {
+/*.panel-footer .btn:hover {
     border: 1px solid #03A8F5;
     background-color: #fff !important;
     color: #03A8F5;
@@ -203,7 +218,7 @@ h4 {
     margin: 15px 0;
     background-color: #03A8F5;
     color: #fff;
-}
+} */
 .navbar {
     margin-bottom: 0;
     background-color: #03A8F5;
@@ -274,7 +289,13 @@ footer .glyphicon {
         font-size: 150px;
     }
   }
-
+/* Member Section */
+.member-row {
+    border: 1px solid #03A6F3;
+    border-radius: 10px;
+    padding: 10px 50px;
+    margin-bottom: 10px;
+}
 
 
 
