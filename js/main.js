@@ -38,11 +38,11 @@ $(document).ready(function () {
 
 function appendUser(user) {
     $("#memberList").append(
-        "<div class='row margin-zero member-row'>" +
-        "<div class='col-md-3' >" +
+        "<div class='col-md-4 member-col'>" +
+        "<div class='row' >" +
         "<img class='img-circle' width='175px' src='" + user.avatar_url + "'>" +
         "</div>" +
-        "<div class='col-md-9'>" +
+        "<div class='row'>" +
         "<a href='" + user.html_url + "' target='_blank'><h2>" + user.name + "</h2></a>" +
             "<p>" + (user.bio == null ? "" : user.bio) + "</p>" +
         "</div>" +
@@ -69,8 +69,8 @@ $(document).ready(function () {
         success: function (result) {
             for (i in result) {
                 $("#repo_list").append(
-                    "<div class='panel-heading'><a href='" + result[i].html_url + "' target='_blank'>" +
-                    result[i].name + "</a></div> <div class='panel-body'>" + result[i].description + "</div>"
+                    "<div class='col-md-4'><div class='panel-heading'><a href='" + result[i].html_url + "' target='_blank'>" +
+                    result[i].name + "</a></div> <div class='panel-body'>" + result[i].description + "</div></div>"
                 );
                 console.log("i: " + i);
             }
@@ -100,3 +100,13 @@ $(document).ready(function () {
         }
     });
 });
+
+//Type Effect
+// var i = 0;
+// var txt = 'brainx-components.github.io';
+// var speed = 50;
+// if (i < txt.length) {
+//     document.getElementById("type-effect").innerHTML += txt.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+// }
