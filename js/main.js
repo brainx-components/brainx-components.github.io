@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 function appendUser(user) {
     $("#memberList").append(
-        "<div class='col-md-4 member-col'>" +
+        "<div class='col-md-4 col-sm-6 member-col'>" +
         "<div class='row' >" +
         "<img class='img-circle' width='175px' src='" + user.avatar_url + "'>" +
         "</div>" +
@@ -69,7 +69,7 @@ $(document).ready(function () {
         success: function (result) {
             for (i in result) {
                 $("#repo_list").append(
-                    "<div class='col-md-4'><div class='panel-heading'><a href='" + result[i].html_url + "' target='_blank'>" +
+                    "<div class='col-md-4 col-sm-6 panel'><div class='panel-heading'><a href='" + result[i].html_url + "' target='_blank'>" +
                     result[i].name + "</a></div> <div class='panel-body'>" + result[i].description + "</div></div>"
                 );
                 console.log("i: " + i);
