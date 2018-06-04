@@ -125,6 +125,9 @@ h4 {
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
 }
+.jumbotron p {
+    padding-top: 20px;
+}
 .container-fluid {
     padding: 60px 50px;
 }
@@ -183,12 +186,15 @@ h4 {
     min-height: 120px;
 }
 .panel {
-    padding:20px;
+    padding:15px;
     /* border-color: #03A8F5; */
     transition: box-shadow 0.5s;
 }
 .panel:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+#repo_list {
+    padding: 0px 20px;
 }
 /*.panel-footer .btn:hover {
     border: 1px solid #03A8F5;
@@ -336,7 +342,7 @@ footer .glyphicon {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .panel {
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
 } 
 

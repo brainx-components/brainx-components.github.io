@@ -13,11 +13,11 @@ $(document).ready(function () {
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
-                scrollTop: $(hash).offset().top
+                scrollTop: $(hash).offset().top - 55
             }, 900, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
+                //window.location.hash = hash;
             });
         } // End if
     });
@@ -50,17 +50,6 @@ function appendUser(user) {
     );
 }
 
-// function getUser(user_url) {
-//     $.ajax({
-//         type: "GET",
-//         url: user_url,
-//         dataType: "json",
-//         success: function (result) {
-//             return result;
-//         }
-//     });
-// };
-
 $(document).ready(function () {
     $.ajax({
         type: "GET",
@@ -69,8 +58,8 @@ $(document).ready(function () {
         success: function (result) {
             for (i in result) {
                 $("#repo_list").append(
-                    "<div class='col-md-4 col-sm-6 panel'><div class='panel-heading'><a href='" + result[i].html_url + "' target='_blank'>" +
-                    result[i].name + "</a></div> <div class='panel-body'>" + result[i].description + "</div></div>"
+                    "<div class='col-md-4 col-sm-6'><div class='panel'><div class='panel-heading'><a href='" + result[i].html_url + "' target='_blank'>" +
+                        result[i].name + "</a></div> <div class='panel-body'>" + (result[i].description == null ? "" : result[i].description) + "</div></div></div>"
                 );
                 console.log("i: " + i);
             }
@@ -85,7 +74,6 @@ $(document).ready(function () {
         dataType: "json",
         success: function (result) {
             for (i in result) {
-                // var user = getUser(result[i].url);
                 $.ajax({
                     type: "GET",
                     url: result[i].url,
@@ -96,17 +84,6 @@ $(document).ready(function () {
                 console.log("i: " + i);
             }
             console.log(result);
-            //$("#repo_count").append("Total Repos: " + result.length);
         }
     });
 });
-
-//Type Effect
-// var i = 0;
-// var txt = 'brainx-components.github.io';
-// var speed = 50;
-// if (i < txt.length) {
-//     document.getElementById("type-effect").innerHTML += txt.charAt(i);
-//     i++;
-//     setTimeout(typeWriter, speed);
-// }
