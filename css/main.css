@@ -120,13 +120,35 @@ h4 {
     margin-bottom: 30px;
 }  
 .jumbotron {
+    position: relative;
     background-color: #03A8F5;
     color: #fff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
 }
-.jumbotron p {
+.container-jumbo .heading {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    right: 0% !important;
+    transform: translateY(-50%);
+}
+.container-jumbo .description {
     padding-top: 20px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0%;
+    right: 0% !important;
+    transform: translateY(-75%);
+}
+.glyphicon-chevron-down {
+    color: white;
+    font-size: 24px;
+}
+.screen-height {
+    height: 100vh;
 }
 .container-fluid {
     padding: 60px 50px;
@@ -196,36 +218,6 @@ h4 {
 #repo_list {
     padding: 0px 20px;
 }
-/*.panel-footer .btn:hover {
-    border: 1px solid #03A8F5;
-    background-color: #fff !important;
-    color: #03A8F5;
-}
-.panel-heading {
-    color: #fff !important;
-    background-color: #03A8F5 !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-.panel-footer {
-    background-color: white !important;
-}
-.panel-footer h3 {
-    font-size: 32px;
-}
-.panel-footer h4 {
-    color: #aaa;
-    font-size: 14px;
-}
-.panel-footer .btn {
-    margin: 15px 0;
-    background-color: #03A8F5;
-    color: #fff;
-} */
 .navbar {
     margin-bottom: 0;
     background-color: #03A8F5;
@@ -236,6 +228,12 @@ h4 {
     letter-spacing: 4px;
     border-radius: 0;
     font-family: Montserrat, sans-serif;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
 }
 .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
@@ -354,6 +352,9 @@ footer .glyphicon {
     .jumbotron p {
         font-size: 14px;
     }
+    .jumbotron span {
+        font-size: 18px;
+    }
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -364,6 +365,9 @@ footer .glyphicon {
     .jumbotron p {
         font-size: 18px;
     }
+    .jumbotron span {
+        font-size: 21px;
+    }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -373,6 +377,9 @@ footer .glyphicon {
     }
     .jumbotron p {
         font-size: 20px;
+    }
+    .jumbotron span {
+        font-size: 22px;
     }
 } 
 

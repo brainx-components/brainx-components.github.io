@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Open Source Components | BrainX Technologies</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,7 +36,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#myPage"><img src="img/logo.svg" alt="logo" width="70px"></a>
+                    <a class="navbar-brand" href="#myPage"><img src="img/logo.svg" alt="logo" width="80px"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -60,14 +60,20 @@
             </div>
         </nav>
         
-        <div class="jumbotron text-center">
-            <h1>Welcome</h1>
+        <div class="jumbotron text-center container-jumbo screen-height margin-zero">
             <!-- <h1>brainx-components.github.io</h1> -->
-            <div class="typewriter">
-                <h1>Learn, Collaborate and Grow!</h1>
+            <div class="heading">
+                <div class="typewriter">
+                    <h1>Learn, Collaborate and Grow!</h1>
+                </div>
             </div>
             <!-- <p class="line-1 anim-typewriter">brainx-components.github.io</p> -->
-            <p>Open Source Web Components!</p>
+            <div class="description">
+                <p>Open Source Web Components!</p>
+                <a href="#projects" title="To Down">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </a>
+            </div>
         </div>
         
         <!-- Container (About Section) -->
@@ -118,85 +124,70 @@
         </div> -->
         
         <!-- Container (Projects Section) -->
-        <div id="projects" class="container text-center bg-grey">
-            <h2><span id="repo_count"></span> Projects</h2>
-            <br>
-            <h4>What we have created</h4>
-            <div class="row text-center slideanim">
-                <div class="">
-                    <div id="repo_list" class="row margin-zero">
-                        
+        <div id="projects" class="container-fluid text-center bg-grey">
+            <div class="container">
+                <h2>
+                    <span id="repo_count"></span> Projects</h2>
+                <br>
+                <h4>What we have created</h4>
+                <div class="row text-center slideanim">
+                    <div class="">
+                        <div id="repo_list" class="row margin-zero">
+                
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
         <!-- Container (Members Section) -->
-        <div id="members" class="container">
-            <div class="text-center">
-                <h2>Members</h2>
-                <h4>Yes, we are Team!</h4>
-            </div>
-            <div class="row text-center slideanim">
-                <div id="memberList" class="row margin-zero">
-                    
+        <div id="members" class="container-fluid">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Members</h2>
+                    <h4>Yes, we are Team!</h4>
                 </div>
-                <!-- <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <p>
-                            <strong>Member 1</strong>
-                        </p>
-                        <p>Member 1</p>
+                <div class="row text-center slideanim">
+                    <div id="memberList" class="row margin-zero">
+                
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <p>
-                            <strong>Member 2</strong>
-                        </p>
-                        <p>Member 2</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <p>
-                            <strong>Member 3</strong>
-                        </p>
-                        <p>Member 3</p>
-                    </div>
-                </div> -->
             </div>
         </div>
         
         <!-- Container (Code Standards Section) -->
-        <div id="code-standards" class="container bg-grey text-center">
-            <h2>CODE STANDARDS</h2>
-            <div class="row">
-                <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-wrench logo-small"></span>
-                    <h4 style="color:#303030;">Html5 Boilerplate</h4>
-                    <p>is the base for all frontend Components</p>
-                </div>
-                <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-leaf logo-small"></span>
-                    <h4>gihub Branches</h4>
-                    <p>Develop, Master</p>
-                </div>
-                <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-certificate logo-small"></span>
-                    <h4>Organized</h4>
-                    <p>Organized Structure</p>
+        <div id="code-standards" class="container-fluid bg-grey text-center">
+            <div class="container">
+                <h2>CODE STANDARDS</h2>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-wrench logo-small"></span>
+                        <h4 style="color:#303030;">Html5 Boilerplate</h4>
+                        <p>is the base for all frontend Components</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-leaf logo-small"></span>
+                        <h4>gihub Branches</h4>
+                        <p>Develop, Master</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-certificate logo-small"></span>
+                        <h4>Organized</h4>
+                        <p>Organized Structure</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <footer class="container text-center">
-            <a href="#myPage" title="To Top">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a>
-            <p>Powered By
-                <a href="https://www.brainxtech.com" title="Visit BrainX Technologies" target="_blank">www.brainxtech.com</a>
-            </p>
+        <footer class="container-fluid text-center">
+            <div class="container">
+                <a href="#myPage" title="To Top">
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                </a>
+                <p>Powered By
+                    <a href="https://www.brainxtech.com" title="Visit BrainX Technologies" target="_blank">www.brainxtech.com</a>
+                </p>
+            </div>
         </footer>
         <!-- Scripts -->
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
